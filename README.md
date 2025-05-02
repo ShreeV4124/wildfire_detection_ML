@@ -53,3 +53,12 @@ class Config:
  NASA_API_KEY = "your_nasa_key"          # From api.nasa.gov
  OPENWEATHER_API_KEY = "your_owm_key"    # From openweathermap.org
 ```
+
+## Dataset
+
+The dataset used in this project is hosted on my project partners repo: (https://github.com/Mayank-Chourasia77/wildfire_detection).
+
+You can access the dataset by downloading it directly from their repository:
+- [Download Dataset](https://github.com/Mayank-Chourasia77/wildfire_detection/tree/main/wildfire_dataset)
+
+Please ensure you download the dataset and place it in the correct directory when running the project.
