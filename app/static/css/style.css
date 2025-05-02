@@ -1,0 +1,229 @@
+/* General Layout Tweaks */
+.container, .container-fluid {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body {
+  background-color: #fafdff; /* Default body background */
+  color: #2C2C2C; /* Default text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  flex: 1;
+}
+/* Dark Mode styles */
+.dark-mode {
+  background-color: #2C2C2C; /* Dark mode background */
+  color: #f1f1f1; /* Dark mode text color */
+}
+
+.dark-mode header {
+  background-color: transparent; /* Allow the background image to show */
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 100px 0px 50px 0px;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Place header above other elements */
+}
+
+header.custom-header {
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust this based on your preference */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Fallback color if image fails to load */
+}
+
+header.custom-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
+  z-index: 1;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ffffff; /* White text for better contrast */
+  position: relative;
+  z-index: 2; /* Place text above the overlay */
+}
+
+header p {
+  font-size: 1.8rem;
+  color: #dc3545; /* Red text color */
+  position: relative;
+  z-index: 2; /* Place text above the overlay */
+}
+
+/* Form Styles */
+form {
+  font-size: 1.2rem;
+}
+
+form .form-label {
+  font-weight: 600;
+}
+
+form .form-control {
+  padding: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #f1f1f1; /* Light mode footer */
+  font-size: 1rem;
+  width: 100%;
+}
+
+.dark-mode footer {
+  background-color: #2C2C2C; /* Dark mode footer */
+  color: #ddd;
+}
+
+/* Learn About Wildfires Section */
+#learn-section {
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+#learn-section h3 {
+  font-size: 2.9rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+#learn-section p,
+#learn-section ul {
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+#learn-section ul {
+  padding-left: 2rem;
+}
+
+#learn-section li {
+  margin-bottom: 1rem;
+}
+
+#learn-section .text-center ul {
+  text-align: left;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0;
+  list-style-position: inside;
+  background-color: transparent; /* Transparent background */
+  color: inherit; /* Inherit text color for dark mode */
+}
+
+.dark-mode #learn-section .text-center ul {
+  background-color: transparent;
+  color: #f1f1f1; /* Change text color in dark mode */
+}
+
+/* Image Styling */
+#learn-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+
+/* Dark Mode Fixes */
+#uploadForm {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Specific styling adjustments for dark mode */
+.dark-mode #uploadForm {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+
+/* Clean heading */
+.realtime-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+/* Glowing button */
+.btn-glow {
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #dc3545, 0 0 20px #dc3545;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 15px #dc3545, 0 0 30px #dc3545;
+  transform: scale(1.05);
+}
+
+/* Dark mode compatibility */
+body.dark-mode .realtime-heading {
+  color: #dc3545;
+}
+
+body.dark-mode .btn-glow {
+  background-color: #dc3545;
+  box-shadow: 0 0 10px #dc3545, 0 0 20px #dc3545;
+}
+
+body.dark-mode .btn-glow:hover {
+  box-shadow: 0 0 15px #dc3545, 0 0 30px #dc3545;
+}
